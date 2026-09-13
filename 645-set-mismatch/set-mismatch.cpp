@@ -15,7 +15,7 @@ public:
             else if( freq[i]==0)
             miss=i;
         }
-        //2,3
+        //2 will be the duplicate and 3 will be the miss
       return {duplicate,miss};  
     }
 };
