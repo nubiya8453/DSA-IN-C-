@@ -1,9 +1,10 @@
 class Solution {
 public:
     string removeDuplicates(string s, int k) {
-        stack<pair<char, int>> st;
+        stack<pair<char,int>> st;
+        int n = s.size();
 
-        for (int i = 0; i < s.size(); i++) {
+        for (int i = 0; i < n; i++) {
             char ch = s[i];
 
             if (!st.empty() && st.top().first == ch) {
@@ -25,7 +26,7 @@ public:
             int freq = st.top().second;
             st.pop();
 
-            for (int i = 0; i < freq; i++) {
+            for (int i = 1; i <= freq; i++) {
                 ans += ch;
             }
         }
@@ -34,4 +35,4 @@ public:
 
         return ans;
     }
-};
+};                                                                                                                              
